@@ -1,0 +1,18 @@
+{
+  "productKey": "inruRAbD7HE",
+  "deviceName": "device1",
+  "productSecret":"KlRpx5AyckVtXOaI",
+  "deviceSecret": "e2f65d471989a894072315e14b06829e",
+  "instanceId": "iot-06z00flczkln79l",
+  "region": "",
+  "subDevice": [
+    {
+      "productKey": "",
+      "deviceName": ""
+    },
+    {
+      "productKey": "",
+      "deviceName": ""
+    }
+  ]
+}

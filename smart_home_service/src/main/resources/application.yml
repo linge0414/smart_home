@@ -1,0 +1,34 @@
+iot:
+  accessKey: LTAI5t9R1EC8mDV82Dbatxc8
+  accessSecret: 8xli58wkkm4v4AEbUSczXC8LISl7os
+  consumerGroupId: DEFAULT_GROUP
+  iotInstanceId: iot-06z00flczkln79l
+  clientId: 001
+  host: iot-06z00flczkln79l.amqp.iothub.aliyuncs.com
+  productKey: inruRAbD7HE
+  deviceName: device1
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: false
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://123.60.191.251:3306/smarthome?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: zyl0414
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+    format:
+      date: yyyy-MM-dd HH:mm:ss
+
+
