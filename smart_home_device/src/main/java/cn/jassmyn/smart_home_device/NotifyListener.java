@@ -9,13 +9,13 @@ import com.aliyun.alink.linksdk.cmp.core.listener.IConnectSubscribeListener;
 import com.aliyun.alink.linksdk.tools.AError;
 
 /**
- * @Description: TODO
+ * @Description: Topic监听类
  * @author: zhangYuLin
  * @date: 2023/5/20 22:07
  */
 public class NotifyListener {
 
-    public void setNotifyListenner() {
+    public void setNotifyListener() {
         //设置订阅的Topic。
         MqttSubscribeRequest request = new MqttSubscribeRequest();
         request.topic = "/" + "inruRAbD7HE" + "/" + "device1" + "/user/getAllProperties";

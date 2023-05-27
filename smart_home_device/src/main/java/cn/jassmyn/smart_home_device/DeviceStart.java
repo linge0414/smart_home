@@ -24,7 +24,7 @@ import org.eclipse.paho.client.mqttv3.IMqttActionListener;
 import org.eclipse.paho.client.mqttv3.IMqttToken;
 
 /**
- * @Description: TODO
+ * @Description: 物理设备启动类
  * @author: zhangYuLin
  * @date: 2023/5/20 17:42
  */
@@ -133,7 +133,7 @@ public class DeviceStart {
                 thingManager.setServiceHandler();
                 thingManager.reportProperty();
                 notifyListener = new NotifyListener();
-                notifyListener.setNotifyListenner();
+                notifyListener.setNotifyListener();
             }
         });
     }

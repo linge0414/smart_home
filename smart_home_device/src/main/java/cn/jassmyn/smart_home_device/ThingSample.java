@@ -131,7 +131,6 @@ public class ThingSample extends BaseSample {
                     request.topic = topic.replace("request", "response");
                     String resId = topic.substring(topic.indexOf("rrpc/request/") + 13);
                     request.msgId = resId;
-                    // TODO 用户根据实际情况填写 仅做参考
                     request.payloadObj = "{\"id\":\"" + resId + "\", \"code\":\"200\"" + ",\"data\":{} }";
                     // aResponse.data =
                     LinkKit.getInstance().getMqttClient().publish(request, new IConnectSendListener() {
@@ -156,7 +155,6 @@ public class ThingSample extends BaseSample {
                     String[] array = topic.split("/");
                     String resId = array[3];
                     request.msgId = resId;
-                    // TODO 用户根据实际情况填写 仅做参考
                     request.payloadObj = "{\"id\":\"" + resId + "\", \"code\":\"200\"" + ",\"data\":{} }";
                     // aResponse.data =
                     LinkKit.getInstance().publish(request, new IConnectSendListener() {

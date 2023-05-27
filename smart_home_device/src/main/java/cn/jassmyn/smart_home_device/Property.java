@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Description: TODO
+ * @Description: 物模型属性类，用于存储物模型属性值，以及对属性值的操作
  * @author: zhangYuLin
  * @date: 2023/5/20 18:18
  */

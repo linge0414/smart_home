@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Description: TODO
+ * @Description: 属性阈值类，用于存储属性阈值，以及对属性阈值的操作
  * @author: zhangYuLin
  * @date: 2023/5/25 23:14
  */

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Description: TODO
+ * @Description: 物模型属性类，用于存储物模型属性，以及对物模型属性的操作
  * @author: zhangYuLin
  * @date: 2023/5/20 18:18
  */
