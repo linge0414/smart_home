@@ -163,6 +163,7 @@ export default {
   },
   data() {
     return {
+      flag: true,
       Humidified: false,
       VehACSwitch: false,
       LightSwitch: false,
@@ -191,8 +192,8 @@ export default {
   },
   created() {
     this.setSwitch()
-    this.updateAllProperties()
     this.init()
+    this.updateAllProperties()
   },
   methods: {
     init() {
@@ -214,7 +215,6 @@ export default {
       this.autoTemperature = auto;
       this.temperatureForm.autoTemperature = auto ? 1 : 0;
       setAutoTemperature(this.temperatureForm).then(response => {
-        console.log(response)
       }).catch(error => {
         console.log(error)
       })
@@ -223,7 +223,7 @@ export default {
       this.autoHumidity = auto;
       this.humidityForm.autoHumidity = auto ? 1 : 0;
       setAutoHumidity(this.humidityForm).then(response => {
-        console.log(response)
+        // console.log(response)
       }).catch(error => {
         console.log(error)
       });
@@ -232,7 +232,7 @@ export default {
       this.autoBrightness = auto;
       this.brightnessForm.autoBrightness = auto ? 1 : 0;
       setAutoBrightness(this.brightnessForm).then(response => {
-        console.log(response)
+        // console.log(response)
       }).catch(error => {
         console.log(error)
       });
@@ -249,28 +249,28 @@ export default {
 
     //开关
     setVehicleACProperty(property) {
-      this.VehACSwitch = property;
+      // this.VehACSwitch = property;
       setVehACPropertyApi(property ? 1 : 0)
           .then(response => {
-            console.log(response)
+            // console.log(response)
           }).catch(error => {
         console.log(error)
       });
     },
     setHumidifierProperty(property) {
-      this.Humidified = property;
+      // this.Humidified = property;
       setHumidifiedPropertyApi(property ? 1 : 0)
           .then(response => {
-            console.log(response)
+            // console.log(response)
           }).catch(error => {
         console.log(error)
       });
     },
     setLightProperty(property) {
-      this.LightSwitch = property;
+      // this.LightSwitch = property;
       setLightPropertyApi(property ? 1 : 0)
           .then(response => {
-            console.log(response)
+            // console.log(response)
           }).catch(error => {
         console.log(error)
       });
@@ -279,7 +279,7 @@ export default {
     updateAllProperties() {
       setInterval(function () {
         getAllProperties().then(response => {
-          console.log(response)
+          // console.log(response)
           this.Humidified = response.Humidified === "1";
           this.VehACSwitch = response.VehACSwitch === "1";
           this.LightSwitch = response.LightSwitch === "1";
@@ -289,7 +289,7 @@ export default {
         }).catch(error => {
           console.log(error)
         })
-      }.bind(this), 5000)
+      }.bind(this), 1000);
 
     },
   }

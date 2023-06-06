@@ -232,8 +232,9 @@ public class AmqpClient {
         Map vehACSwitch = (Map) properityMap.get("VehACSwitch");
         historicalData.setVehACSwitch((Integer) vehACSwitch.get("value"));
 
-        Map lightLuminanceMap = (Map) properityMap.get("LightLuminance");
-        historicalData.setLightLuminance((Integer) lightLuminanceMap.get("value"));
+//        Map lightLuminanceMap = (Map) properityMap.get("LightLuminance");
+//        historicalData.setLightLuminance((Integer) lightLuminanceMap.get("value"));
+        historicalData.setLightLuminance(0);
         amqpClient.historicalDataMapper.insert(historicalData);
     }
 }

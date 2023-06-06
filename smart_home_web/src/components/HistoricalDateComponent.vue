@@ -21,7 +21,7 @@ export default {
     setTimeout(()=>{
       //这里就写你要执行的语句即可，先让数据库的数据加载进去数组中你在从数组中取值就好了
       this.drawChart();
-    },100)
+    },800)
 
   },
   created() {

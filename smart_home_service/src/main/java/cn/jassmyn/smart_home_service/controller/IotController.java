@@ -22,6 +22,7 @@ import java.util.Map;
 @CrossOrigin
 public class IotController {
 
+
     @Autowired
     private IotService iotService;
 
@@ -30,18 +31,21 @@ public class IotController {
 
     @GetMapping("/setHumidifiedProperty/{property}")
     public Map<String, String> setHumidifiedProperty(@PathVariable String property) {
+        Property.propertyMap.put("Humidified", property);
         iotService.setHumidifiedProperty(property);
         return Property.propertyMap;
     }
 
     @GetMapping("/setVehACProperty/{property}")
     public Map<String, String> setVehACProperty(@PathVariable String property) {
+        Property.propertyMap.put("VehACSwitch", property);
         iotService.setVehACProperty(property);
         return Property.propertyMap;
     }
 
     @GetMapping("/setLightProperty/{property}")
     public Map<String, String> setLightProperty(@PathVariable String property) {
+        Property.propertyMap.put("LightSwitch", property);
         iotService.setLightProperty(property);
         return Property.propertyMap;
     }

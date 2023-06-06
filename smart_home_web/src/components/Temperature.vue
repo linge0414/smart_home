@@ -173,7 +173,7 @@ export default {
               }
             ]
           });
-      }.bind(this), 2000);
+      }.bind(this), 1000);
 
       option && myChart.setOption(option);
     }
