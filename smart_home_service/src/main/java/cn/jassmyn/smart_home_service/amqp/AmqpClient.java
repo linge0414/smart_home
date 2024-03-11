@@ -210,30 +210,20 @@ public class AmqpClient {
         HistoricalData historicalData = new HistoricalData();
         Map map = (Map) JSON.parse(content);
         Map properityMap = (Map) map.get("items");
-
         Map lightSwitchMap = (Map) properityMap.get("LightSwitch");
         historicalData.setLightSwitch((Integer) lightSwitchMap.get("value"));
         historicalData.setTime(DateConvertUtil.getDateTime((Long) lightSwitchMap.get("time"), 0));
         historicalData.setId(String.valueOf((Long) lightSwitchMap.get("time")));
-
         Map humidityMap = (Map) properityMap.get("Humidity");
         historicalData.setHumidity((Integer) humidityMap.get("value"));
-
         Map temperatureMap = (Map) properityMap.get("Temperature");
         historicalData.setTemperature((Integer) temperatureMap.get("value"));
-
         Map humidifiedMap = (Map) properityMap.get("Humidified");
         historicalData.setHumidified((Integer) humidifiedMap.get("value"));
-
-
         Map ambientBrightnessMap = (Map) properityMap.get("AmbientBrightness");
         historicalData.setAmbientBrightness((Integer) ambientBrightnessMap.get("value"));
-
         Map vehACSwitch = (Map) properityMap.get("VehACSwitch");
         historicalData.setVehACSwitch((Integer) vehACSwitch.get("value"));
-
-//        Map lightLuminanceMap = (Map) properityMap.get("LightLuminance");
-//        historicalData.setLightLuminance((Integer) lightLuminanceMap.get("value"));
         historicalData.setLightLuminance(0);
         amqpClient.historicalDataMapper.insert(historicalData);
     }
